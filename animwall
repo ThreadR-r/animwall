@@ -28,7 +28,7 @@ __pids=""
 # $2 monitor coords
 wrapped()
 {
-  nice -n "${__nice_value}" xwinwrap \
+  exec nice -n "${__nice_value}" xwinwrap \
     -ov \
     -g "$2" \
     -- nice -n "${__nice_value}" mpv \
