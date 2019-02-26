@@ -29,6 +29,12 @@ __pids=""
 wrapped()
 {
   exec nice -n "${__nice_value}" xwinwrap \
+    -ni \
+    -un \
+    -st \
+    -sp \
+    -nf \
+    -b \
     -ov \
     -g "$2" \
     -- nice -n "${__nice_value}" mpv \
