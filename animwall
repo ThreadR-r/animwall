@@ -35,7 +35,6 @@ wrapped()
     -sp \
     -nf \
     -b \
-    -ov \
     -g "$2" \
     -- nice -n "${__nice_value}" mpv \
     -wid WID "$1" \
