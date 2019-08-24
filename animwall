@@ -110,6 +110,9 @@ EOF
 
   # Parse config file
   for config in ${animwall_configs}; do
+    if [[ $config == \#* ]]; then
+      continue
+    fi
     split_config="$(printf -- "%s" "${config}" | tr ':' ' ')"
     wallpaper="$(printf -- "%s" "${split_config}" | awk '{ print $1 }')"
     monitor="$(printf -- "%s" "${split_config}" | awk '{ print $2 }')"
