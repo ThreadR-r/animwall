@@ -32,12 +32,14 @@ wrapped()
     -ni \
     -un \
     -st \
+    -fdt \
     -sp \
     -nf \
     -b \
     -g "$2" \
     -- nice -n "${__nice_value}" mpv \
     -wid WID "$1" \
+    --geometry="$2" \
     --no-osc \
     --no-osd-bar \
     --loop-file \
